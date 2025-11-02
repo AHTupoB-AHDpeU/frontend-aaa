@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import SplitText from "./components/SplitText";
 import AnimatedList from './components/AnimatedList';
-import './FAQ.css';
+import './faq.css';
 
 function FAQ() {
     const items = [
