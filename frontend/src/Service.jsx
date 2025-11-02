@@ -193,7 +193,7 @@ function Service({ user, openAuthModal }) {
         const fetchServices = async () => {
             try {
                 setLoading(true);
-                const response = await fetch(`${API_BASE}/services/`), // const response = await fetch('http://localhost:8000/api/services/');
+                const response = await fetch(`${API_BASE}/services/`); // const response = await fetch('http://localhost:8000/api/services/');
 
                 if (!response.ok) {
                     throw new Error('Ошибка загрузки услуг');
