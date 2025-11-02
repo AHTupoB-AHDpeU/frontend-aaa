@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import AnimatedContent from './components/AnimatedContent'
 import './Home.css';
 import SplitText from "./components/SplitText";
+import config from './config';
+
+const API_BASE = `${config.API_BASE_URL}/api`;
 
 function Home({ user }) {
     const navigate = useNavigate();
@@ -16,7 +19,7 @@ function Home({ user }) {
         const fetchReviews = async () => {
             try {
                 setLoading(true);
-                const response = await fetch('http://localhost:8000/api/reviews/');
+                const response = await fetch(`${API_BASE}/reviews/`); // const response = await fetch('http://localhost:8000/api/reviews/');
 
                 if (!response.ok) {
                     throw new Error('Ошибка загрузки отзывов');
@@ -81,7 +84,7 @@ function Home({ user }) {
     };
 
     const handleNavigateToAdmin = () => {
-        window.open('http://localhost:8000/admin/', '_blank');
+        window.open(`${config.API_BASE_URL}/admin/`, '_blank'); //window.open('http://localhost:8000/admin/',
     };
 
     const isAdminOrStaff = user?.is_staff || user?.is_superuser;

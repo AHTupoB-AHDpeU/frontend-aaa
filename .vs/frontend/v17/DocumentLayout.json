@@ -7,6 +7,22 @@
       "RelativeMoniker": "D:0:0:{462EE049-9FE1-B47D-1B3E-22BACA5D9185}|frontend\\frontend.esproj|solutionrelative:frontend\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{462EE049-9FE1-B47D-1B3E-22BACA5D9185}|frontend\\frontend.esproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\footer.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{462EE049-9FE1-B47D-1B3E-22BACA5D9185}|frontend\\frontend.esproj|solutionrelative:frontend\\src\\footer.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{462EE049-9FE1-B47D-1B3E-22BACA5D9185}|frontend\\frontend.esproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\service.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{462EE049-9FE1-B47D-1B3E-22BACA5D9185}|frontend\\frontend.esproj|solutionrelative:frontend\\src\\service.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{462EE049-9FE1-B47D-1B3E-22BACA5D9185}|frontend\\frontend.esproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\review.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{462EE049-9FE1-B47D-1B3E-22BACA5D9185}|frontend\\frontend.esproj|solutionrelative:frontend\\src\\review.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{462EE049-9FE1-B47D-1B3E-22BACA5D9185}|frontend\\frontend.esproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{462EE049-9FE1-B47D-1B3E-22BACA5D9185}|frontend\\frontend.esproj|solutionrelative:frontend\\src\\home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{462EE049-9FE1-B47D-1B3E-22BACA5D9185}|frontend\\frontend.esproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{462EE049-9FE1-B47D-1B3E-22BACA5D9185}|frontend\\frontend.esproj|solutionrelative:frontend\\src\\config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -22,11 +38,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Footer.jsx",
+              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\Footer.jsx",
+              "RelativeDocumentMoniker": "frontend\\src\\Footer.jsx",
+              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\Footer.jsx",
+              "RelativeToolTip": "frontend\\src\\Footer.jsx",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-11-02T21:50:29.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Service.jsx",
+              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\Service.jsx",
+              "RelativeDocumentMoniker": "frontend\\src\\Service.jsx",
+              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\Service.jsx",
+              "RelativeToolTip": "frontend\\src\\Service.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-11-02T21:48:12.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Review.jsx",
+              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\Review.jsx",
+              "RelativeDocumentMoniker": "frontend\\src\\Review.jsx",
+              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\Review.jsx",
+              "RelativeToolTip": "frontend\\src\\Review.jsx",
+              "ViewState": "AgIAAMEAAAAAAAAAAAAQwM0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-11-02T21:43:44.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Home.jsx",
+              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\Home.jsx",
+              "RelativeDocumentMoniker": "frontend\\src\\Home.jsx",
+              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\Home.jsx",
+              "RelativeToolTip": "frontend\\src\\Home.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-11-02T21:40:18.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "config.js",
               "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\config.js",
               "RelativeDocumentMoniker": "frontend\\src\\config.js",
@@ -38,18 +110,14 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "package.json",
               "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\package.json",
               "RelativeDocumentMoniker": "frontend\\package.json",
               "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\package.json",
               "RelativeToolTip": "frontend\\package.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-11-02T21:10:40.825Z",
               "EditorCaption": ""
@@ -62,7 +130,7 @@
               "RelativeDocumentMoniker": "frontend\\src\\App.jsx",
               "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\App.jsx",
               "RelativeToolTip": "frontend\\src\\App.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAOUCAAAAAAAAAAAuwEEAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2025-11-02T21:10:00.852Z",
               "EditorCaption": ""

@@ -2,6 +2,9 @@
 import Modal from './Modal';
 import './Service.css';
 import SplitText from "./components/SplitText";
+import config from './config';
+
+const API_BASE = `${config.API_BASE_URL}/api`;
 
 function OrderModal({ isOpen, onClose, selectedServices, services, user }) {
     const [address, setAddress] = useState('');
@@ -21,7 +24,7 @@ function OrderModal({ isOpen, onClose, selectedServices, services, user }) {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:8000/api/orders/create/', {
+            const response = await fetch(`${API_BASE}/orders/create/`, { // const response = await fetch('http://localhost:8000/api/orders/create/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -190,7 +193,7 @@ function Service({ user, openAuthModal }) {
         const fetchServices = async () => {
             try {
                 setLoading(true);
-                const response = await fetch('http://localhost:8000/api/services/');
+                const response = await fetch(`${API_BASE}/services/`), // const response = await fetch('http://localhost:8000/api/services/');
 
                 if (!response.ok) {
                     throw new Error('Ошибка загрузки услуг');
