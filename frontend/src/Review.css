@@ -1,0 +1,143 @@
+.review-page {
+    min-height: 100vh;
+    padding: 32px 80px 32px 80px;
+    background-color: #f8fafc;
+    border-radius: 32px;
+}
+
+.review-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.review-header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.review-title-wrapper {
+    flex: 1;
+    min-width: 200px;
+}
+
+.review-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1f2937;
+    margin: 0px;
+    text-align: left;
+}
+
+.review-header-button {
+    padding: 16px 70px;
+    font-size: 24px;
+    border: none;
+    border-radius: 30px;
+    background-color: #8A2BE2;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+    .review-header-button:hover {
+        background-color: #4B0082;
+    }
+
+    .review-header-button:focus {
+        outline: none;
+    }
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.review-item {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .review-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+.review-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.review-author {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.review-rating {
+    font-size: 18px;
+}
+
+.review-service {
+    font-size: 16px;
+    color: #6b7280;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.review-text {
+    font-size: 16px;
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.review-date {
+    font-size: 14px;
+    color: #9ca3af;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .review-page {
+        padding: 24px 12px;
+    }
+
+    .review-header-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .review-title {
+        font-size: 28px;
+    }
+
+    .review-header-button {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .review-item {
+        padding: 20px 16px;
+    }
+
+    .review-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

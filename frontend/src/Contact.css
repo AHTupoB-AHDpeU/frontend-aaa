@@ -1,0 +1,197 @@
+.contact-page {
+    min-height: 85vh;
+    padding: 32px 80px;
+    background-color: #f8fafc;
+    border-radius: 32px;
+}
+
+.contact-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.contact-header {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #1f2937;
+}
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+@media (min-width: 950px) {
+    .contact-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.contact-card {
+    background: white;
+    border-radius: 32px;
+    padding: 32px 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .contact-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+.card-icon {
+    width: 64px;
+    height: 64px;
+    background-color: #dbeafe;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #1f2937;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-label {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.contact-value {
+    font-size: 16px;
+    color: #1f2937;
+    font-weight: 500;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    background-color: #e5e7eb;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #374151;
+    transition: background-color 0.3s ease;
+}
+
+    .social-link:hover {
+        background-color: #d1d5db;
+    }
+
+.time-zone, .work-area {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 8px;
+}
+
+.zone-label, .area-label {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.zone-value, .area-value {
+    font-size: 16px;
+    color: #1f2937;
+    font-weight: 500;
+}
+
+.address-item, .metro-item, .parking-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.address-label, .metro-label, .parking-label {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.address-value, .metro-value, .parking-value {
+    font-size: 16px;
+    color: #1f2937;
+    font-weight: 500;
+}
+
+.contact-footer {
+    text-align: center;
+    padding: 24px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.footer-text {
+    font-size: 18px;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .contact-page {
+        padding: 32px 12px;
+    }
+
+    .contact-header {
+        margin-bottom: 48px;
+    }
+
+    .contact-title {
+        font-size: 28px;
+    }
+
+    .contact-card {
+        padding: 24px 16px;
+    }
+
+    .card-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .card-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .footer-text {
+        font-size: 16px;
+    }
+}

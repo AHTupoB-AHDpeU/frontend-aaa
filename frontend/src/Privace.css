@@ -1,0 +1,125 @@
+.privace-page {
+    min-height: 85vh;
+    padding: 32px 80px 32px 80px;
+    background-color: #f8fafc;
+    border-radius: 32px;
+}
+
+.privace-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.privace-header {
+    margin-top: 4px;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+.privace-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 32px;
+    color: #1f2937;
+}
+
+.privace-content {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.privace-subtitle {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+    margin-top: 16px;
+}
+
+.privace-paragraph {
+    font-size: 18px;
+    color: #374151;
+    line-height: 1.6;
+    margin: 0;
+    text-align: justify;
+}
+
+    .privace-paragraph:last-child {
+        margin-bottom: 0;
+    }
+
+@media (max-width: 1024px) {
+    .privace-page {
+        padding: 32px 40px;
+    }
+
+    .privace-content {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .privace-page {
+        padding: 24px 20px;
+    }
+
+    .privace-title {
+        font-size: 28px;
+        margin: 24px 0;
+    }
+
+    .privace-header {
+        margin-bottom: 32px;
+    }
+
+    .privace-subtitle {
+        font-size: 24px;
+    }
+
+    .privace-paragraph {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .privace-content {
+        padding: 0 10px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .privace-page {
+        padding: 16px 12px;
+    }
+
+    .privace-title {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+
+    .privace-header {
+        margin-bottom: 24px;
+    }
+
+    .privace-subtitle {
+        font-size: 20px;
+    }
+
+    .privace-paragraph {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .privace-content {
+        gap: 16px;
+    }
+}
