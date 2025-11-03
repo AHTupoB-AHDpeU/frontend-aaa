@@ -309,7 +309,8 @@ function Service({ user, openAuthModal }) {
                                 >
                                     <div className="service-image">
                                         <img
-                                            src={service.picture ? `http://localhost:8000${service.picture}` : '/services/service1.jpg'}
+                                            src={service.picture ? `${config.API_BASE_URL}${service.picture}` : '/services/service1.jpg'}
+                                            //src={service.picture ? `https://localhost:8000${service.picture}` : '/services/service1.jpg'}
                                             alt={service.name}
                                             onError={(e) => {
                                                 e.target.src = '/services/service_res.jpg'; // Запасное изображение
