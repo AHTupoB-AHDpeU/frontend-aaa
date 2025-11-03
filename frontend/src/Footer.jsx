@@ -16,7 +16,7 @@ function Footer({ onOpenProfileModal }) {
                     <img
                         width="80"
                         height="80"
-                        src="https://img.icons8.com/external-others-pike-picture/100/external-industry-wood-logging-industry-others-pike-picture-6.png"
+                        src='vite.png'
                         alt="Логотип компании - грузоперевозки лесоматериалов"
                     />
                     <span className="site-name">

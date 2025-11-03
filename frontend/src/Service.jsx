@@ -25,7 +25,7 @@ function OrderModal({ isOpen, onClose, selectedServices, services, user }) {
         try {
             const token = localStorage.getItem('token');
             const response = await fetch(`${API_BASE}/orders/create/`, {
-            // response = await fetch('http://localhost:8000/api/orders/create/', {
+            //const response = await fetch('http://localhost:8000/api/orders/create/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -312,7 +312,7 @@ function Service({ user, openAuthModal }) {
                                             src={service.picture ? `http://localhost:8000${service.picture}` : '/services/service1.jpg'}
                                             alt={service.name}
                                             onError={(e) => {
-                                                e.target.src = '/services/service1.jpg'; // Запасное изображение
+                                                e.target.src = '/services/service_res.jpg'; // Запасное изображение
                                             }}
                                         />
                                     </div>

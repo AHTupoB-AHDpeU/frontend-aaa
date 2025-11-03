@@ -51,6 +51,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
+    margin-top: 30px;
 }
 
     .nav-section a {
@@ -134,6 +135,7 @@
 
     .nav-section {
         justify-content: center;
+        margin-top: 0px;
     }
 }
 
