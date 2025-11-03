@@ -1,5 +1,5 @@
 ﻿import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
@@ -386,6 +386,8 @@ function AppContent() {
     const [showSuccessLoginMessage, setShowSuccessLoginMessage] = useState(false);
     const [showAuthRequiredMessage, setShowAuthRequiredMessage] = useState(false);
 
+    const navigate = useNavigate();
+
     useEffect(() => {
         const token = localStorage.getItem('token');
         const userData = localStorage.getItem('user');
@@ -412,7 +414,7 @@ function AppContent() {
 
     const handleOrderServiceClick = () => {
         if (user) {
-            window.location.href = '/service';
+            navigate('/service');
         } else {
             openAuthModal(true);
         }

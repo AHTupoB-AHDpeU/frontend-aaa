@@ -216,7 +216,7 @@ function Review({ user, openAuthModal }) {
                 //fetch('http://localhost:8000/api/reviews/'),
                 fetch(`${API_BASE}/services/`),
                 //fetch('http://localhost:8000/api/services/'),
-                fetch(`${API_BASE}/ratings/`) 
+                fetch(`${API_BASE}/ratings/`)
                 //fetch('http://localhost:8000/api/ratings/')
             ]);
 
