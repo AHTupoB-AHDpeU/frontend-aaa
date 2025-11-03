@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,1000;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
 .home-page {
     min-height: 100vh;
     padding: 32px 80px 32px 80px;
@@ -10,19 +13,90 @@
     margin: 0 auto;
 }
 
-.home-image-wrapper {
-    display: flex;
-    justify-content: center;
+.main-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
     align-items: center;
-    margin-bottom: 60px;
 }
 
-.home-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 32px;
+.left-image-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-image-full {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right-text-section {
+    height: 600px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-title {
+    font-size: 85px;
+    font-weight: 700;
+    color: #2d3748;
+    font-family: 'Mulish', serif;
+}
+
+.main-title1 {
+    font-size: 85px;
+    font-weight: 700;
+    color: #2d3748;
+    font-family: 'Mulish', serif;
+    line-height: 0;
+}
+
+.main-title2 {
+    font-size: 85px;
+    font-weight: 700;
+    color: #2d3748;
+    font-family: 'Mulish', serif;
+}
+
+.bottom-headers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.left-bottom-header,
+.right-bottom-header {
+    text-align: start;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.decorative-header-left {
+    font-size: 38px;
+    font-weight: 800;
+    color: #2d3748;
+    font-family: 'Dela Gothic One', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    margin: 0;
+}
+
+.decorative-header-right {
+    font-size: 38px;
+    font-weight: 300;
+    color: #2d3748;
+    font-family: 'Dela Gothic One', sans-serif;
+    margin: 0;
+    letter-spacing: 0px;
+    background: #FFD700;
+    padding: 15px 30px;
+    border-radius: 30px;
+    display: inline-block;
 }
 
 .services-cta-section {
@@ -31,24 +105,26 @@
     margin: 30px 0;
 }
 
-.services-cta-section .services-cta-button {
-    width: 100%;
-    max-width: 400px;
-    padding: 16px 52px;
-    font-size: 24px !important;
-    border: none;
-    border-radius: 30px;
-    background-color: #8A2BE2;
-    color: white;
-    cursor: pointer;
-    font-family: inherit;
-    transition: background-color 0.3s ease;
-    white-space: nowrap;
-}
+    .services-cta-section .services-cta-button {
+        width: 100%;
+        max-width: 400px;
+        padding: 16px 52px;
+        font-size: 24px !important;
+        border: none;
+        border-radius: 30px;
+        background-color: #8A2BE2;
+        color: white;
+        cursor: pointer;
+        font-family: inherit;
+        transition: background-color 0.3s ease;
+        white-space: nowrap;
+        transition: all 0.3s ease;
+    }
 
-.services-cta-section .services-cta-button:hover {
-    background-color: #4B0082;
-}
+    .services-cta-section .services-cta-button:hover {
+        background-color: #4B0082;
+        transform: translateY(-3px);
+    }
 
 .services-cta-section .services-cta-button:focus {
     outline: none;
@@ -228,6 +304,48 @@
         min-width: 260px;
         max-width: 260px;
         padding: 16px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .main-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .right-text-section {
+        height: auto;
+        align-items: center;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .main-title,
+    .main-title1,
+    .main-title2 {
+        font-size: 40px;
+        line-height: 1.1;
+    }
+
+    .main-title1 {
+        line-height: 0.9;
+    }
+
+    .bottom-headers {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .left-bottom-header,
+    .right-bottom-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .decorative-header-left,
+    .decorative-header-right {
+        font-size: 24px;
+        padding: 10px 20px;
     }
 }
 

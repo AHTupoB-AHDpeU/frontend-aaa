@@ -172,10 +172,12 @@
     font-family: inherit;
     transition: background-color 0.3s ease;
     white-space: nowrap;
+    transition: all 0.3s ease;
 }
 
     .order-button:hover:not(:disabled) {
         background-color: #4B0082;
+        transform: translateY(-3px);
     }
 
     .order-button:focus {
