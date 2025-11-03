@@ -57,9 +57,9 @@
             border-bottom: none;
         }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .faq-page {
-        padding: 24px 20px;
+        padding: 32px 0px;
     }
 
     .faq-title {
@@ -70,11 +70,11 @@
 
 @media (max-width: 480px) {
     .faq-page {
-        padding: 16px 12px;
+        padding: 32px 0px;
     }
 
     .faq-title {
         font-size: 36px;
-        margin: 20px 0;
+        margin: 24px 0;
     }
 }

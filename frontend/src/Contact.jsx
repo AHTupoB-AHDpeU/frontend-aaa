@@ -93,7 +93,7 @@ function Contact() {
                             <div className="address-item">
                                 <span className="address-label">Факт. адрес:</span>
                                 <span className="address-value">
-                                    181000, Псковская область, Плюсский р-он, рп Плюсса, ул. Партизанская, д. 23, кв. 1
+                                    181000, Псковская область, Плюсский р-он, рп Плюсса, ул. Партизанская, д. 9, кв. 1
                                 </span>
                             </div>
                             <div className="work-area">
