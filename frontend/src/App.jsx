@@ -12,8 +12,8 @@ import Privace from "./Privace";
 import ScrollToTop from './components/ScrollToTop';
 import config from './config';
 
-const API_BASE = 'http://localhost:8000/api';
-//const API_BASE = `${config.API_BASE_URL}/api`;
+//const API_BASE = 'http://localhost:8000/api';
+const API_BASE = `${config.API_BASE_URL}/api`;
 
 
 const validatePassword = (password) => {

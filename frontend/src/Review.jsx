@@ -27,8 +27,8 @@ function ReviewModal({ isOpen, onClose, user, services, ratings, onReviewCreated
 
         try {
             const token = localStorage.getItem('token');
-            //const response = await fetch(`${API_BASE}/reviews/create/`, {
-            const response = await fetch('http://localhost:8000/api/reviews/create/', {
+            const response = await fetch(`${API_BASE}/reviews/create/`, {
+            //const response = await fetch('http://localhost:8000/api/reviews/create/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -212,12 +212,12 @@ function Review({ user, openAuthModal }) {
             setLoading(true);
 
             const [reviewsResponse, servicesResponse, ratingsResponse] = await Promise.all([
-                //fetch(`${API_BASE}/reviews/`),
-                fetch('http://localhost:8000/api/reviews/'),
-                //fetch(`${API_BASE}/services/`),
-                fetch('http://localhost:8000/api/services/'),
-                //fetch(`${API_BASE}/ratings/`) 
-                fetch('http://localhost:8000/api/ratings/')
+                fetch(`${API_BASE}/reviews/`),
+                //fetch('http://localhost:8000/api/reviews/'),
+                fetch(`${API_BASE}/services/`),
+                //fetch('http://localhost:8000/api/services/'),
+                fetch(`${API_BASE}/ratings/`) 
+                //fetch('http://localhost:8000/api/ratings/')
             ]);
 
             if (!reviewsResponse.ok || !servicesResponse.ok || !ratingsResponse.ok) {
