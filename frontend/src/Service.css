@@ -228,7 +228,7 @@
     }
 
     .service-title {
-        font-size: 28px;
+        font-size: 36px;
     }
 
     .search-section {
@@ -245,7 +245,7 @@
 
     .order-button {
         width: 100%;
-        max-width: 300px;
+        max-width: 350px;
     }
 }
 

@@ -12,8 +12,8 @@ import Privace from "./Privace";
 import ScrollToTop from './components/ScrollToTop';
 import config from './config';
 
-/*const API_BASE = 'http://localhost:8000/api';*/
-const API_BASE = `${config.API_BASE_URL}/api`;
+const API_BASE = 'http://localhost:8000/api';
+//const API_BASE = `${config.API_BASE_URL}/api`;
 
 
 const validatePassword = (password) => {
@@ -59,7 +59,7 @@ function AuthModal({ isOpen, onClose, onLoginSuccess, showAuthRequiredMessage, o
         try {
             if (isLogin) {
                 // Вход
-                const response = await fetch(`${API_BASE}/login/`, { // const response = await fetch(`${API_BASE}/login/`, {
+                const response = await fetch(`${API_BASE}/login/`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -516,10 +516,11 @@ function AppContent() {
                     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
                     transition: right 0.3s ease;
                     z-index: 1000;
-                    padding: 80px 20px 20px;
+                    padding: 20px 20px 20px;
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
+                    overflow-y: auto;
                 }
                 
                 .mobile-menu-content.open {
@@ -567,6 +568,8 @@ function AppContent() {
                     transition: all 0.3s ease;
                     font-family: 'Oswald', sans-serif;
                     margin-top: 20px;
+                    width: 100%;
+                    box-sizing: border-box;
                 }
 
                 .mobile-order-button:focus,
@@ -713,15 +716,23 @@ function AppContent() {
                     </button>
                 )}
 
-                <button
-                    className="mobile-order-button"
-                    onClick={() => {
-                        closeMobileMenu();
-                        setIsModalOpen(true);
-                    }}
-                >
-                    Заказать услугу
-                </button>
+                {user ? (
+                    <Link to="/service" onClick={closeMobileMenu}>
+                        <button className="mobile-order-button">
+                            Заказать услугу
+                        </button>
+                    </Link>
+                ) : (
+                    <button
+                        className="mobile-order-button"
+                        onClick={() => {
+                            closeMobileMenu();
+                            openAuthModal(true);
+                        }}
+                    >
+                        Заказать услугу
+                    </button>
+                )}
             </div>
 
             <div style={{ width: "100%", minHeight: "calc(80vh)", display: "flex", justifyContent: "center", alignItems: "center" }}>

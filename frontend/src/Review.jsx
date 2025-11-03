@@ -27,7 +27,8 @@ function ReviewModal({ isOpen, onClose, user, services, ratings, onReviewCreated
 
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`${API_BASE}/reviews/create/`, { //const response = await fetch('http://localhost:8000/api/reviews/create/', {
+            //const response = await fetch(`${API_BASE}/reviews/create/`, {
+            const response = await fetch('http://localhost:8000/api/reviews/create/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -44,9 +45,6 @@ function ReviewModal({ isOpen, onClose, user, services, ratings, onReviewCreated
                 const data = await response.json();
                 console.log('Отзыв создан:', data);
                 setSuccess(true);
-                if (onReviewCreated) {
-                    onReviewCreated();
-                }
             } else {
                 const errorData = await response.json();
                 setError(errorData.detail || errorData.message || 'Ошибка при создании отзыва');
@@ -56,6 +54,13 @@ function ReviewModal({ isOpen, onClose, user, services, ratings, onReviewCreated
         } finally {
             setLoading(false);
         }
+    };
+
+    const handleClose = () => {
+        if (success && onReviewCreated) {
+            onReviewCreated();
+        }
+        onClose();
     };
 
     const resetForm = () => {
@@ -75,7 +80,7 @@ function ReviewModal({ isOpen, onClose, user, services, ratings, onReviewCreated
     if (!isOpen) return null;
 
     return (
-        <Modal isOpen={isOpen} onClose={onClose}>
+        <Modal isOpen={isOpen} onClose={handleClose}>
             <h2>Оставить отзыв</h2>
 
             {success && (
@@ -198,14 +203,21 @@ function Review({ user, openAuthModal }) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const handleReviewCreated = () => {
+        fetchData();
+    };
+
     const fetchData = async () => {
         try {
             setLoading(true);
 
             const [reviewsResponse, servicesResponse, ratingsResponse] = await Promise.all([
-                fetch(`${API_BASE}/reviews/`), // fetch('http://localhost:8000/api/reviews/'),
-                fetch(`${API_BASE}/services/`), // fetch('http://localhost:8000/api/services/'),
-                fetch(`${API_BASE}/ratings/`) //fetch('http://localhost:8000/api/ratings/')
+                //fetch(`${API_BASE}/reviews/`),
+                fetch('http://localhost:8000/api/reviews/'),
+                //fetch(`${API_BASE}/services/`),
+                fetch('http://localhost:8000/api/services/'),
+                //fetch(`${API_BASE}/ratings/`) 
+                fetch('http://localhost:8000/api/ratings/')
             ]);
 
             if (!reviewsResponse.ok || !servicesResponse.ok || !ratingsResponse.ok) {
@@ -340,6 +352,7 @@ function Review({ user, openAuthModal }) {
                     user={user}
                     services={services}
                     ratings={ratings}
+                    onReviewCreated={handleReviewCreated}
                 />
             </div>
         </div>

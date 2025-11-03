@@ -124,12 +124,12 @@
     }
 
     .review-title {
-        font-size: 28px;
+        font-size: 36px;
     }
 
     .review-header-button {
         width: 100%;
-        max-width: 200px;
+        max-width: 300px;
     }
 
     .review-item {

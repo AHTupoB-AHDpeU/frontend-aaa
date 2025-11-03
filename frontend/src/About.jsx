@@ -77,7 +77,7 @@ function About() {
                         <div className="image-wrapper">
                             <img
                                 src="/about-image.jpg"
-                                alt="Наша команда"
+                                alt="Наша рабочая техника"
                                 className="about-image"
                             />
                             <div className="image-border"></div>
