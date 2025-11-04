@@ -3,11 +3,31 @@
     padding: 32px 80px 32px 80px;
     background-color: #f8fafc;
     border-radius: 32px;
+    position: relative;
+    overflow: hidden;
 }
+
+    .review-page::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('/back.png');
+        background-repeat: repeat-y;
+        background-size: 100% auto;
+        background-position: center top;
+        opacity: 0.6;
+        z-index: 0;
+        border-radius: 32px;
+    }
 
 .review-container {
     max-width: 1600px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .review-header-section {

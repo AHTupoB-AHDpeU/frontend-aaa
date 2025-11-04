@@ -3,6 +3,7 @@ import Modal from './Modal';
 import './Service.css';
 import SplitText from "./components/SplitText";
 import config from './config';
+import AnimatedContent from './components/AnimatedContent'
 
 const API_BASE = `${config.API_BASE_URL}/api`;
 
@@ -300,35 +301,47 @@ function Service({ user, openAuthModal }) {
 
                 {services.length > 0 ? (
                     <>
-                        <div className="services-grid">
-                            {filteredServices.map(service => (
-                                <div
-                                    key={service.id}
-                                    className={`service-card ${selectedServices.includes(service.id) ? 'selected' : ''}`}
-                                    onClick={() => toggleServiceSelection(service.id)}
-                                >
-                                    <div className="service-image">
-                                        <img
-                                            src={service.picture ? `${config.API_BASE_URL}${service.picture}` : '/services/service1.jpg'}
-                                            //src={service.picture ? `https://localhost:8000${service.picture}` : '/services/service1.jpg'}
-                                            alt={service.name}
-                                            onError={(e) => {
-                                                e.target.src = '/services/service_res.jpg'; // Запасное изображение
-                                            }}
-                                        />
+                        <AnimatedContent
+                            distance={200}
+                            direction="vertical"
+                            reverse={false}
+                            duration={2.0}
+                            ease="power3.out"
+                            initialOpacity={0}
+                            animateOpacity={true}
+                            scale={1}
+                            threshold={0.1}
+                            delay={0.5}
+                        >
+                            <div className="services-grid">
+                                {filteredServices.map(service => (
+                                    <div
+                                        key={service.id}
+                                        className={`service-card ${selectedServices.includes(service.id) ? 'selected' : ''}`}
+                                        onClick={() => toggleServiceSelection(service.id)}
+                                    >
+                                        <div className="service-image">
+                                            <img
+                                                src={service.picture ? `${config.API_BASE_URL}${service.picture}` : '/services/service1.jpg'}
+                                                //src={service.picture ? `https://localhost:8000${service.picture}` : '/services/service1.jpg'}
+                                                alt={service.name}
+                                                onError={(e) => {
+                                                    e.target.src = '/services/service_res.jpg'; // Запасное изображение
+                                                }}
+                                            />
+                                        </div>
+                                        <div className="service-info">
+                                            <h3 className="service-name">{service.name}</h3>
+                                            <p className="service-description">{service.description}</p>
+                                            <div className="service-price">{service.price} ₽</div>
+                                        </div>
+                                        <div className="service-check">
+                                            {selectedServices.includes(service.id) ? '✓' : ''}
+                                        </div>
                                     </div>
-                                    <div className="service-info">
-                                        <h3 className="service-name">{service.name}</h3>
-                                        <p className="service-description">{service.description}</p>
-                                        <div className="service-price">{service.price} ₽</div>
-                                    </div>
-                                    <div className="service-check">
-                                        {selectedServices.includes(service.id) ? '✓' : ''}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-
+                                ))}
+                            </div>
+                        </AnimatedContent>
                         {filteredServices.length === 0 && (
                             <div className="centered-message no-services-message">
                                 Услуги по вашему запросу не найдены

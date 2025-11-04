@@ -1,6 +1,7 @@
 ﻿import React from "react";
 import SplitText from "./components/SplitText";
 import './About.css';
+import AnimatedContent from './components/AnimatedContent'
 
 function About() {
     return (
@@ -40,76 +41,128 @@ function About() {
                             дрова, щепа. Имеем опыт работы как с частными лицами, так и с
                             лесозаготовительными компаниями.
                         </p>
-                        <div className="about-features">
-                            <div className="feature-item">
-                                <div className="feature-dot"></div>
-                                <span>Надежная техника УРАЛ</span>
+                        <AnimatedContent
+                            distance={100}
+                            direction="horizontal"
+                            reverse={true}
+                            duration={2.0}
+                            ease="power3.out"
+                            initialOpacity={0}
+                            animateOpacity={true}
+                            scale={1}
+                            threshold={0.1}
+                            delay={0.5}
+                        >
+                            <div className="about-features">
+                                <div className="feature-item">
+                                    <div className="feature-dot"></div>
+                                    <span>Надежная техника УРАЛ</span>
+                                </div>
+                                <div className="feature-item">
+                                    <div className="feature-dot"></div>
+                                    <span>Своевременная доставка</span>
+                                </div>
+                                <div className="feature-item">
+                                    <div className="feature-dot"></div>
+                                    <span>Большой опыт работы</span>
+                                </div>
+                                <div className="feature-item">
+                                    <div className="feature-dot"></div>
+                                    <span>Работа по договору</span>
+                                </div>
                             </div>
-                            <div className="feature-item">
-                                <div className="feature-dot"></div>
-                                <span>Своевременная доставка</span>
-                            </div>
-                            <div className="feature-item">
-                                <div className="feature-dot"></div>
-                                <span>Большой опыт работы</span>
-                            </div>
-                            <div className="feature-item">
-                                <div className="feature-dot"></div>
-                                <span>Работа по договору</span>
-                            </div>
-                        </div>
+                        </AnimatedContent>
                     </div>
-
+                    
                     <div className="about-image-section">
-                        <div className="image-wrapper">
-                            <img
-                                src="/about-image.png"
-                                alt="Наша рабочая техника"
-                                className="about-image"
-                            />
-                            <div className="image-border"></div>
-                        </div>
-
-                        <div className="image-caption">
-                            <p>Наша рабочая техника - УРАЛ с КМУ для перевозки лесоматериалов</p>
-                        </div>
+                        <AnimatedContent
+                            distance={100}
+                            direction="horizontal"
+                            reverse={false}
+                            duration={2.0}
+                            ease="power3.out"
+                            initialOpacity={0}
+                            animateOpacity={true}
+                            scale={1}
+                            threshold={0.1}
+                            delay={0.1}
+                        >
+                            <div className="image-wrapper">
+                                <img
+                                    src="/about-image.png"
+                                    alt="Наша рабочая техника"
+                                    className="about-image"
+                                />
+                                <div className="image-border"></div>
+                            </div>
+                        </AnimatedContent>
+                        <AnimatedContent
+                            distance={100}
+                            direction="horizontal"
+                            reverse={false}
+                            duration={2.0}
+                            ease="power3.out"
+                            initialOpacity={0}
+                            animateOpacity={true}
+                            scale={1}
+                            threshold={0.1}
+                            delay={0.1}
+                        >
+                            <div className="image-caption">
+                                <p>Наша рабочая техника - УРАЛ с КМУ для перевозки лесоматериалов</p>
+                            </div>
+                        </AnimatedContent>
                     </div>
                 </div>
 
-                <div className="about-why">
-                    <h3 className="why-title">
-                        Почему обращаются к нам
-                    </h3>
-                    <div className="reasons-grid">
-                        <div className="reason-card">
-                            <div className="reason-icon">
-                                <span>🚛</span>
+                <AnimatedContent
+                    distance={100}
+                    direction="vertical"
+                    reverse={false}
+                    duration={2.0}
+                    ease="power3.out"
+                    initialOpacity={0}
+                    animateOpacity={true}
+                    scale={1}
+                    threshold={0.1}
+                    delay={0.1}
+                >
+                    <div className="about-why">
+                        <h3 className="why-title">
+                            Почему обращаются к нам
+                        </h3>
+                        <div className="reasons-grid">
+                            <div className="reason-card">
+                                <div className="reason-icon">
+                                    <span>🚛</span>
+                                </div>
+                                <h4 className="reason-title">Надежная техника</h4>
+                                <p className="reason-text">
+                                    Работаем на грузовиках УРАЛ, проверенных временем и подходящих для лесных дорог
+                                </p>
                             </div>
-                            <h4 className="reason-title">Надежная техника</h4>
-                            <p className="reason-text">
-                                Работаем на грузовиках УРАЛ, проверенных временем и подходящих для лесных дорог
-                            </p>
-                        </div>
-                        <div className="reason-card">
-                            <div className="reason-icon">
-                                <span>⏱️</span>
+                            <div className="reason-card">
+                                <div className="reason-icon">
+                                    <span>⏱️</span>
+                                </div>
+                                <h4 className="reason-title">Соблюдение сроков</h4>
+                                <p className="reason-text">
+                                    Ценим ваше время и гарантируем доставку в оговоренные сроки
+                                </p>
                             </div>
-                            <h4 className="reason-title">Соблюдение сроков</h4>
-                            <p className="reason-text">
-                                Ценим ваше время и гарантируем доставку в оговоренные сроки
-                            </p>
-                        </div>
-                        <div className="reason-card">
-                            <div className="reason-icon">
-                                <span>💝</span>
+                            <div className="reason-card">
+                                <div className="reason-icon">
+                                    <span>💝</span>
+                                </div>
+                                <h4 className="reason-title">Поддержка</h4>
+                                <p className="reason-text">
+                                    Всегда готовы помочь нашим клиентам и партнерам
+                                </p>
                             </div>
-                            <h4 className="reason-title">Поддержка</h4>
-                            <p className="reason-text">
-                                Всегда готовы помочь нашим клиентам и партнерам
-                            </p>
                         </div>
                     </div>
-                </div>
+                </AnimatedContent>
+
             </div>
         </div>
     );

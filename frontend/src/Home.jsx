@@ -94,7 +94,6 @@ function Home({ user }) {
         <div className="home-page">
             <div className="home-container">
                 <div className="main-content-wrapper">
-                    {/* Левая колонка - фото */}
                     <AnimatedContent
                         distance={200}
                         direction="horizontal"
@@ -166,7 +165,6 @@ function Home({ user }) {
                     </div>
                 </div>
 
-                {/* Нижние заголовки */}
                 <div className="bottom-headers">
                     <AnimatedContent
                         distance={100}

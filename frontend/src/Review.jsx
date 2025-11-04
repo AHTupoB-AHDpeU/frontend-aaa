@@ -3,6 +3,7 @@ import Modal from './Modal';
 import './Review.css';
 import SplitText from "./components/SplitText";
 import config from './config';
+import AnimatedContent from './components/AnimatedContent'
 
 const API_BASE = `${config.API_BASE_URL}/api`;
 
@@ -321,25 +322,38 @@ function Review({ user, openAuthModal }) {
                 </div>
 
                 {reviews.length > 0 ? (
-                    <div className="reviews-list">
-                        {reviews.map(review => (
-                            <div key={review.id} className="review-item">
-                                <div className="review-item-header">
-                                    <h3 className="review-author">
-                                        {review.user_first_name || review.user_username || 'Пользователь'}
-                                    </h3>
-                                    <div className="review-rating">
-                                        {renderStars(review.rating_value)}
+                    <AnimatedContent
+                        distance={200}
+                        direction="vertical"
+                        reverse={false}
+                        duration={2.0}
+                        ease="power3.out"
+                        initialOpacity={0}
+                        animateOpacity={true}
+                        scale={1}
+                        threshold={0.1}
+                        delay={0.5}
+                    >
+                        <div className="reviews-list">
+                            {reviews.map(review => (
+                                <div key={review.id} className="review-item">
+                                    <div className="review-item-header">
+                                        <h3 className="review-author">
+                                            {review.user_first_name || review.user_username || 'Пользователь'}
+                                        </h3>
+                                        <div className="review-rating">
+                                            {renderStars(review.rating_value)}
+                                        </div>
+                                    </div>
+                                    <p className="review-service">Услуга: {review.service_name}</p>
+                                    <p className="review-text">{review.description}</p>
+                                    <div className="review-date">
+                                        {formatDate(review.date)}
                                     </div>
                                 </div>
-                                <p className="review-service">Услуга: {review.service_name}</p>
-                                <p className="review-text">{review.description}</p>
-                                <div className="review-date">
-                                    {formatDate(review.date)}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                            ))}
+                        </div>
+                    </AnimatedContent>
                 ) : (
                     <div className="centered-message no-reviews-message">
                         Пока нет отзывов. Будьте первым!
