@@ -281,6 +281,43 @@ function AuthModal({ isOpen, onClose, onLoginSuccess, showAuthRequiredMessage, o
 
 function ProfileModal({ isOpen, onClose, user, onLogout, showSuccessMessage }) {
     const [loading, setLoading] = useState(false);
+    const [orders, setOrders] = useState([]);
+    const [ordersLoading, setOrdersLoading] = useState(true);
+    const [ordersError, setOrdersError] = useState(null);
+
+    useEffect(() => {
+        if (isOpen && user) {
+            fetchUserOrders();
+        }
+    }, [isOpen, user]);
+
+    const fetchUserOrders = async () => {
+        try {
+            setOrdersLoading(true);
+            setOrdersError(null);
+
+            const token = localStorage.getItem('token');
+            const response = await fetch(`${API_BASE}/orders/`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Token ${token}`
+                },
+            });
+
+            if (response.ok) {
+                const ordersData = await response.json();
+                setOrders(ordersData);
+            } else {
+                setOrdersError('Не удалось загрузить историю заказов');
+            }
+        } catch (err) {
+            setOrdersError('Ошибка подключения к серверу');
+            console.error('Orders fetch error:', err);
+        } finally {
+            setOrdersLoading(false);
+        }
+    };
 
     const handleLogout = async () => {
         setLoading(true);
@@ -302,6 +339,28 @@ function ProfileModal({ isOpen, onClose, user, onLogout, showSuccessMessage }) {
             setLoading(false);
             onClose();
         }
+    };
+
+    const formatDate = (dateString) => {
+        const options = {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        };
+        return new Date(dateString).toLocaleDateString('ru-RU', options);
+    };
+
+    const getStatusColor = (status) => {
+        const colorMap = {
+            'pending': '#f59e0b',
+            'confirmed': '#3b82f6',
+            'in_progress': '#8b5cf6',
+            'completed': '#10b981',
+            'cancelled': '#ef4444'
+        };
+        return colorMap[status] || '#6b7280';
     };
 
     if (!isOpen || !user) return null;
@@ -345,11 +404,118 @@ function ProfileModal({ isOpen, onClose, user, onLogout, showSuccessMessage }) {
                 />
             </div>
 
+            <div className="orders-section">
+                <h3 style={{ marginBottom: '15px', textAlign: 'center' }}>
+                    История заказов
+                </h3>
+
+                {ordersLoading ? (
+                    <div style={{ textAlign: 'center', padding: '20px' }}>
+                        Загрузка заказов...
+                    </div>
+                ) : ordersError ? (
+                    <div style={{
+                        color: 'red',
+                        textAlign: 'center',
+                        padding: '10px',
+                        backgroundColor: '#fff0f0',
+                        borderRadius: '5px',
+                        marginBottom: '15px'
+                    }}>
+                        {ordersError}
+                    </div>
+                ) : orders.length === 0 ? (
+                    <div style={{ textAlign: 'center', padding: '20px', color: '#6b7280' }}>
+                        У вас пока нет заказов
+                    </div>
+                ) : (
+                    <div className="orders-list" style={{ maxHeight: '300px', overflowY: 'auto' }}>
+                        {orders.map(order => (
+                            <div
+                                key={order.id}
+                                className="order-item"
+                                style={{
+                                    border: '1px solid #e5e7eb',
+                                    borderRadius: '10px',
+                                    padding: '15px',
+                                    marginBottom: '10px',
+                                    backgroundColor: '#f9fafb'
+                                }}
+                            >
+                                <div style={{
+                                    display: 'flex',
+                                    justifyContent: 'space-between',
+                                    alignItems: 'center',
+                                    marginBottom: '10px'
+                                }}>
+                                    <strong>Заказ #{order.id}</strong>
+                                    <span
+                                        style={{
+                                            backgroundColor: getStatusColor(order.status),
+                                            color: 'white',
+                                            padding: '4px 8px',
+                                            borderRadius: '12px',
+                                            fontSize: '12px',
+                                            fontWeight: 'bold'
+                                        }}
+                                    >
+                                        {order.status_display || order.status}
+                                    </span>
+                                </div>
+
+                                <div style={{ marginBottom: '8px' }}>
+                                    <small style={{ color: '#6b7280' }}>
+                                        Создан: {formatDate(order.created_at)}
+                                    </small>
+                                </div>
+
+                                {order.address && (
+                                    <div style={{ marginBottom: '8px', fontSize: '14px' }}>
+                                        <strong>Адрес:</strong> {order.address}
+                                    </div>
+                                )}
+
+                                {order.services_details && order.services_details.length > 0 && (
+                                    <div style={{ marginBottom: '8px' }}>
+                                        <strong>Услуги:</strong>
+                                        <ul style={{
+                                            margin: '5px 0',
+                                            paddingLeft: '20px',
+                                            fontSize: '14px',
+                                            listStyle: 'none',
+
+                                        }}>
+                                            {order.services_details.map((service, index) => (
+                                                <li key={service.id}>
+                                                    {service.name} - {service.price} ₽
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
+
+                                <div style={{
+                                    display: 'flex',
+                                    justifyContent: 'space-between',
+                                    borderTop: '1px solid #e5e7eb',
+                                    paddingTop: '8px',
+                                    fontWeight: 'bold'
+                                }}>
+                                    <span>Итого:</span>
+                                    <span>{order.total_cost} ₽</span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                )}
+            </div>
+
             <button
                 type="button"
                 className="auth-button"
                 onClick={handleLogout}
                 disabled={loading}
+                style={{ marginTop: '20px' }}
             >
                 {loading ? 'Выход...' : 'Выйти'}
             </button>

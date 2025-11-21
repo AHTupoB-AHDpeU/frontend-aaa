@@ -221,19 +221,7 @@ function Home({ user }) {
 
                 <div className="reviews-carousel-section">
                     <div className="reviews-carousel-title">
-                        <SplitText
-                            text="Отзывы наших клиентов"
-                            className="contact-title"
-                            delay={100}
-                            duration={0.6}
-                            ease="power3.out"
-                            splitType="chars"
-                            from={{ opacity: 0, y: 40 }}
-                            to={{ opacity: 1, y: 0 }}
-                            threshold={0.1}
-                            rootMargin="-100px"
-                            textAlign="center"
-                        />
+                        Отзывы наших клиентов
                     </div>
 
                     {loading ? (
