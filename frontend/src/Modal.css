@@ -213,7 +213,7 @@
         color: #0056b3;
     }
 
-@media (max-width: 720px) {
+@media (max-width: 500px) {
     .modal-overlay {
         position: fixed;
         top: 0;
@@ -381,5 +381,15 @@
             color: #0056b3;
         }
 
+    .orders-section {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        background-color: #f8fafc;
+        border-radius: 32px;
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
 }
     
