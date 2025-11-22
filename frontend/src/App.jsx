@@ -446,7 +446,7 @@ function ProfileModal({ isOpen, onClose, user, onLogout, showSuccessMessage }) {
                                     display: 'flex',
                                     justifyContent: 'space-between',
                                     alignItems: 'center',
-                                    marginBottom: '10px'
+                                    marginBottom: '4px'
                                 }}>
                                     <strong>Заказ #{order.id}</strong>
                                     <span
@@ -463,22 +463,23 @@ function ProfileModal({ isOpen, onClose, user, onLogout, showSuccessMessage }) {
                                     </span>
                                 </div>
 
-                                <div style={{ marginBottom: '8px' }}>
+                                <div style={{ marginBottom: '4px' }}>
                                     <small style={{ color: '#6b7280' }}>
                                         Создан: {formatDate(order.created_at)}
                                     </small>
                                 </div>
 
                                 {order.address && (
-                                    <div style={{ marginBottom: '8px', fontSize: '14px' }}>
+                                    <div style={{ marginBottom: '4px', fontSize: '14px' }}>
                                         <strong>Адрес:</strong> {order.address}
                                     </div>
                                 )}
 
                                 {order.services_details && order.services_details.length > 0 && (
-                                    <div style={{ marginBottom: '8px' }}>
+                                    <div style={{ marginBottom: '4px' }}>
                                         <strong>Услуги:</strong>
                                         <ul style={{
+                                            margin: '5px 0',
                                             margin: '5px 0',
                                             paddingLeft: '20px',
                                             fontSize: '14px',
@@ -487,7 +488,7 @@ function ProfileModal({ isOpen, onClose, user, onLogout, showSuccessMessage }) {
                                         }}>
                                             {order.services_details.map((service, index) => (
                                                 <li key={service.id}>
-                                                    {service.name} - {service.price} ₽
+                                                    {service.name}
                                                 </li>
                                             ))}
                                         </ul>

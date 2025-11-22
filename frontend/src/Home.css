@@ -297,7 +297,7 @@
 
 .orders-list {
     overflow-y: auto;
-    padding-right: 5px;
+    padding: 1px 5px 0 0;
 }
 
     .orders-list::-webkit-scrollbar {

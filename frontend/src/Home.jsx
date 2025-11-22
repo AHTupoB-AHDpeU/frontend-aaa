@@ -2,7 +2,6 @@
 import { useNavigate } from 'react-router-dom';
 import AnimatedContent from './components/AnimatedContent'
 import './Home.css';
-import SplitText from "./components/SplitText";
 import config from './config';
 
 const API_BASE = `${config.API_BASE_URL}/api`;
