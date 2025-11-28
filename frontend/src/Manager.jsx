@@ -156,9 +156,6 @@ function Manager() {
         { value: 'cancelled', label: 'Отменен' }
     ];
 
-    if (loading) return <div className="loading">Загрузка заказов...</div>;
-    if (error) return <div className="error">Ошибка: {error}</div>;
-
     return (
         <div className="manager-page">
             <div className="manager-container">
@@ -179,6 +176,9 @@ function Manager() {
                         />
                     </div>
                 </div>
+
+                {loading && <div className="loading">Загрузка заказов...</div>}
+                {error && <div className="error">Ошибка: {error}</div>}
 
                 <AnimatedContent
                     distance={200}

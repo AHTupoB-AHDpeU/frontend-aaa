@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{462EE049-9FE1-B47D-1B3E-22BACA5D9185}|frontend\\frontend.esproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\manager.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{462EE049-9FE1-B47D-1B3E-22BACA5D9185}|frontend\\frontend.esproj|solutionrelative:frontend\\src\\manager.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{462EE049-9FE1-B47D-1B3E-22BACA5D9185}|frontend\\frontend.esproj|c:\\users\\\u0430\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\manager.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{462EE049-9FE1-B47D-1B3E-22BACA5D9185}|frontend\\frontend.esproj|solutionrelative:frontend\\src\\manager.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,9 +32,22 @@
               "RelativeDocumentMoniker": "frontend\\src\\Manager.jsx",
               "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\Manager.jsx",
               "RelativeToolTip": "frontend\\src\\Manager.jsx",
-              "ViewState": "AgIAAMAAAAAAAAAAAAAAAM8AAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAAALkAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-11-28T21:35:57.845Z",
+              "WhenOpened": "2025-11-28T21:50:05.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Manager.css",
+              "DocumentMoniker": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\Manager.css",
+              "RelativeDocumentMoniker": "frontend\\src\\Manager.css",
+              "ToolTip": "C:\\Users\\\u0410\u043D\u0434\u0440\u0435\u0439\\source\\repos\\frontend\\frontend\\src\\Manager.css",
+              "RelativeToolTip": "frontend\\src\\Manager.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-28T21:44:17.487Z",
               "EditorCaption": ""
             }
           ]
