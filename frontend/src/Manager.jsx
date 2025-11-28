@@ -204,9 +204,6 @@ function Manager() {
                                             options={statusOptions}
                                             disabled={updatingStatus[order.id]}
                                         />
-                                        {updatingStatus[order.id] && (
-                                            <div className="status-updating">Обновление...</div>
-                                        )}
                                     </div>
                                 </div>
 
