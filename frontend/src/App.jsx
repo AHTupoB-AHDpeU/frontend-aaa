@@ -11,6 +11,7 @@ import Footer from './Footer';
 import Privace from "./Privace";
 import ScrollToTop from './components/ScrollToTop';
 import config from './config';
+import Manager from "./Manager";
 
 //const API_BASE = 'http://localhost:8000/api';
 const API_BASE = `${config.API_BASE_URL}/api`;
@@ -405,7 +406,7 @@ function ProfileModal({ isOpen, onClose, user, onLogout, showSuccessMessage }) {
             </div>
 
             <div className="orders-section">
-                <h3 style={{ marginBottom: '15px', textAlign: 'center' }}>
+                <h3 style={{ marginBottom: '15px', textAlign: 'center', marginTop: '5px' }}>
                     История заказов
                 </h3>
 
@@ -536,6 +537,7 @@ function PageTitle() {
             '/service': 'Услуги',
             '/faq': 'FAQ',
             '/privacy': 'Политика конфиденциальности',
+            '/manager': 'Панель заказов',
         };
 
         const title = titles[location.pathname];
@@ -914,6 +916,7 @@ function AppContent() {
                         <Route path="/service" element={<Service user={user} openAuthModal={openAuthModal} />} />
                         <Route path="/faq" element={<FAQ />} />
                         <Route path="/privacy" element={<Privace />} />
+                        <Route path="/manager" element={<Manager />} />
                     </Routes>
                 </div>
             </div>

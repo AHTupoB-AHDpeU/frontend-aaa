@@ -285,6 +285,38 @@
         border: none !important;
     }
 
+.manager-panel-section {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.manager-panel-button {
+    background: #FFD700;
+    color: #1f2937;
+    border: none;
+    padding: 12px 60px;
+    border-radius: 30px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+    .manager-panel-button:hover {
+        box-shadow: 0 0 0 3px #8A2BE2;
+    }
+
+    .manager-panel-button:active,
+    .manager-panel-button:focus,
+    .manager-panel-button:focus-visible {
+        outline: none !important;
+        box-shadow: 0 0 0 3px #8A2BE2 !important;
+        border: none !important;
+    }
+
 .orders-section {
     display: flex;
     flex-direction: column;
@@ -439,11 +471,11 @@
 
     .admin-panel-button {
         width: 100%;
-        max-width: 300px;
+        max-width: 400px;
     }
 
     .reviews-carousel-title {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .reviews-carousel {

@@ -87,7 +87,13 @@ function Home({ user }) {
         //window.open('http://localhost:8000/admin/');
     };
 
-    const isAdminOrStaff = user?.is_staff || user?.is_superuser;
+    const handleNavigateToManager = () => {
+        navigate('/manager');
+    };
+
+    //const isAdminOrStaff = user?.is_staff || user?.is_superuser;
+    const isAdmin = user?.is_superuser;
+    const isStaff = user?.is_staff;
 
     return (
         <div className="home-page">
@@ -208,12 +214,23 @@ function Home({ user }) {
                 </div>
 
                 <div className="admin-panel-section">
-                    {isAdminOrStaff && (
+                    {isAdmin && (
                         <button
                             className="admin-panel-button"
                             onClick={handleNavigateToAdmin}
                         >
                             Административная панель Django
+                        </button>
+                    )}
+                </div>
+
+                <div className="manager-panel-section">
+                    {isStaff && (
+                        <button
+                            className="manager-panel-button"
+                            onClick={handleNavigateToManager}
+                        >
+                            Панель заказов
                         </button>
                     )}
                 </div>
